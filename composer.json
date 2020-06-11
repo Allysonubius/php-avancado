@@ -1,0 +1,13 @@
+{
+    "name": "allys/php-avancado",
+    "description": "Curso avan\u0000ado em PHP.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Allysonubius",
+        "email": "allysomoliveira7@gmail.com"
+    }],
+    "require": {
+        "php": ">= 7.2.0"
+    }
+}
