@@ -1,13 +1,21 @@
 {
-    "name": "allys/modulo-1",
-    "description": "Busca de CEP online",
+    "name": "allys/modulo",
+    "description": "Composer de CEP online.",
     "type": "library",
     "license": "MIT",
     "authors": [{
         "name": "Allyson",
         "email": "allysomoliveira7@gmail.com"
     }],
-    "requirea": {
-        "php": ">= 7.2.0"
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Search": "src/"
+        },
+        "psr-4": {
+            "allys\\metodo\\": "src"
+        }
     }
 }
