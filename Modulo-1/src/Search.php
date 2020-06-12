@@ -1,8 +1,10 @@
 <?php
-namespace allys\modulo{
-    class Search
+
+namespace allys\modulo;
+    
+      class Search
     {
-        private $url =  "https://viacep.com.br/ws/";
+        public $url =  "https://viacep.com.br/ws/";
 
         public function getAddressFromZipcode(string $zipCode): array
         {
@@ -10,7 +12,6 @@ namespace allys\modulo{
 
         	$get = file_get_contents($this -> url.$zipCode."/json");
 
-        	print_r($get);
+        	return(array) json_decode($get);
         }
     }
-}

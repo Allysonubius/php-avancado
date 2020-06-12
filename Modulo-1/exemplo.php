@@ -1,9 +1,11 @@
 <?php
 
-use \allys\metodo\Search;
+require_once "vendor/autoload.php";
+
+use allys\modulo\Search;
 
 $busca = new Search;
 
-$resultado = $busca -> getAddressFromZipcode('01001000');
+$resultado = $busca -> getAddressFromZipcode('0100100');
 
 print_r($resultado);
