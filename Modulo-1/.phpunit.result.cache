@@ -1,0 +1,1 @@
+C:30:"PHPUnit\Runner\TestResultCache":170:{a:2:{s:7:"defects";a:1:{s:49:"SearchTest::testGetaddressFromZipcodeDefaultUsage";i:1;}s:5:"times";a:1:{s:49:"SearchTest::testGetaddressFromZipcodeDefaultUsage";d:0.077;}}}
