@@ -13,7 +13,7 @@
 
 use Illuminate\Routing\Route;
 
-Route::get('/','usuario@cadastrar');
+Route::get('/','usuario@cadastrar') -> name('home');
 Route::post('/salvar','usuario@salvar') -> name ('salvar');
 //Route::post('/salvar','usuario@salvar');
 

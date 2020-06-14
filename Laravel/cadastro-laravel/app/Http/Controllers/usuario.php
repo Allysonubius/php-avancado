@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Model\Usuario as UsuarioModel;
+
 class usuario extends Controller
 {
     public function cadastrar()
@@ -13,6 +15,14 @@ class usuario extends Controller
 
     public function salvar(Request $request)
     {
-    	dd($request -> all());
+    	$request -> validate([
+    		"nome" => "required",
+    		"email" => "required | email"
+    		"senha" => "required | min:5"
+    	]);
+    	UsuarioModel::cadastrar($request);
+
+    	return view('usuario.sucesso');
+
     }
 }
