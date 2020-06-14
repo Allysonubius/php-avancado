@@ -8,9 +8,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController
 {
-	/**
-	* @Route("/")
-	*/
 
 	public function index(Request $request) : Response
 	{
@@ -22,6 +19,6 @@ class DefaultController
 			]));
 		$resp -> setStatusCode(200);
 
-		Return $resp;
+		return $resp;
 	}
 }
