@@ -2,21 +2,26 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
-class UsuarioController
+/**
+*	@Route("/", name="web_usuario_")
+*/
+
+class UsuarioController extends AbstractController
 {
 	/**
-	*	@Route("/", methods={`"GET"})
+	*	@Route("/", methods={`"GET"}, name="index")
 	*/
 	public function index() : Response
 	{
-		return new Respnse("Implementar formulário de cadastro");
+		return $this -> render("usuario/form.html.twig");
 	}
 
 	/**
-	*	@Route("/salvar", methods={"POST"})
+	*	@Route("/salvar", methods={"POST"}, name="salvar")
 	*/
 	public function salvar() : Response
 	{

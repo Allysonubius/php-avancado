@@ -5,6 +5,10 @@ namespace App\Controller\API;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Annotation\JsonResponse;
 
+/**
+*	@Route("/", name="web_usuario_")
+*/
+
 class UsuarioController
 {
 
