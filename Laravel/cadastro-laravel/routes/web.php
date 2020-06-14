@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/','usuario@cadastrar');
+use Illuminate\Routing\Route;
 
+Route::get('/','usuario@cadastrar');
 Route::post('/salvar','usuario@salvar');
 
 //Route::match(['get','post'],'/',);
