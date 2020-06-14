@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
+use App\Model\Usuario;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  //Rota usuario
 Route::getPrefix('v1') -> group(function(){
     Route::get('lista', function () {
-        return ["a","b","c"];
+        return Usuario::listar(10);
     });
     Route::post('cadastra', function () {
         echo 'implementar';
