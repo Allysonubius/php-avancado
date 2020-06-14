@@ -4,6 +4,7 @@ namespace App\model;
 
 use Illminate\Database\Eloquent\Model;
 use Hash;
+use Carbon\Carbon;
 
 class Usuario extends Model
 {
@@ -29,9 +30,9 @@ class Usuario extends Model
 			"nome" => $request -> input ('nome'),
 			"email" => $request -> input ('email'),
 			"senha" -> $request -> input ('senha'),
-			"data_cadastro" => DB::raw('NOW()');
+			"data_cadastro" => new Carbon()
 		]);
-	}
 
-	dd($sql -> toSql(),$request -> all());
+		dd(DB::getQueryLog());
+	}
 }

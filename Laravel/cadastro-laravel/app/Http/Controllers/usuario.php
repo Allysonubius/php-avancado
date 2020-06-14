@@ -24,5 +24,15 @@ class usuario extends Controller
 
     	return view('usuario.sucesso');
 
+    	if(UsuarioModel::cadastrar($request))
+    	{
+    		return view ('usuario.sucesso',[
+    			"fulano" => $request -> input ('nome')
+    		]);
+    	}else
+    	{
+    		echo "Ops! Falhou ao cadastrar !"
+    	}
+
     }
 }
