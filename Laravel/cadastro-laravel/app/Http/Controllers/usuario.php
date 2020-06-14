@@ -8,7 +8,7 @@ class usuario extends Controller
 {
     public function cadastrar()
     {
-    	echo 10;
+    	return view('usuario.cadastro');
     }
 
     public function salvar(Request $request)

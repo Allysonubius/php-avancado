@@ -3,6 +3,7 @@
 namespace App\model;
 
 use Illminate\Database\Eloquent\Model;
+use Hash;
 
 class Usuario extends Model
 {
@@ -27,6 +28,7 @@ class Usuario extends Model
 		$sql = self::insert([
 			"nome" => $request -> input ('nome'),
 			"email" => $request -> input ('email'),
+			"senha" -> $request -> input ('senha'),
 			"data_cadastro" => DB::raw('NOW()');
 		]);
 	}

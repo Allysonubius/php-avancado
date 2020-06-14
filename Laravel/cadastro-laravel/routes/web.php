@@ -14,6 +14,7 @@
 use Illuminate\Routing\Route;
 
 Route::get('/','usuario@cadastrar');
-Route::post('/salvar','usuario@salvar');
+Route::post('/salvar','usuario@salvar') -> name ('salvar');
+//Route::post('/salvar','usuario@salvar');
 
 //Route::match(['get','post'],'/',);
